@@ -1,0 +1,98 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Size variants */
+.sm {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+.md {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.lg {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+}
+
+/* Color variants */
+.primary {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    color: #fff;
+}
+
+.primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+}
+
+.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.ghost {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ghost:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.danger {
+    background: #ef4444;
+    color: #fff;
+}
+
+.danger:hover:not(:disabled) {
+    background: #dc2626;
+}
+
+/* Full width */
+.fullWidth {
+    width: 100%;
+}
+
+/* Loading state */
+.loading {
+    position: relative;
+}
+
+.spinner {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
