@@ -17,8 +17,8 @@ import styles from './Button.module.css';
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     /** Visual variant */
     variant?: 'primary' | 'secondary' | 'ghost' | 'danger';
-    /** Size variant */
-    size?: 'sm' | 'md' | 'lg';
+    /** Scale variant */
+    Scale?: 'sm' | 'md' | 'lg';
     /** Full width button */
     fullWidth?: boolean;
     /** Loading state */
@@ -40,7 +40,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  */
 export function Button({
     variant = 'primary',
-    size = 'md',
+    Scale = 'md',
     fullWidth = false,
     isLoading = false,
     disabled,
@@ -51,7 +51,7 @@ export function Button({
     const classNames = [
         styles.button,
         styles[variant],
-        styles[size],
+        styles[Scale],
         fullWidth ? styles.fullWidth : '',
         isLoading ? styles.loading : '',
         className,
